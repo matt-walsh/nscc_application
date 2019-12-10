@@ -1,0 +1,165 @@
+#input-section{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+#name-formal{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+#name-informal{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    
+    grid-column: 1 / 5;
+    grid-row: 2;
+}
+
+#street-address{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    
+    grid-column: 1 / 5;
+    grid-row: 3;
+}
+
+#city-address{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;;
+    
+    grid-column: 1 / 5;
+    grid-row: 4;
+}
+
+#phone-numbers{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    
+    grid-column: 1 / 5;
+    grid-row: 5;
+}
+
+#misc-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    grid-column: 1 / 5;
+    grid-row: 6;
+}
+
+#language-prof{
+    grid-column: 1 / 3;
+    grid-row: 7;
+}
+
+#citizenship{
+    grid-column: 3 / 5;
+    grid-row: 7;
+}
+
+#program-choices-programs{
+    grid-column: 1 / 3;
+    grid-row: 8;
+}
+
+#program-choices-locations{
+    grid-column: 3 / 5;
+    grid-row: 8;
+}
+
+#application-fee-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    grid-column: 1 / 5;
+    grid-row: 9 ;
+}
+
+#payment-type{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+
+    grid-column: 1 / 5;
+    grid-row: 10;
+}
+
+#payment-details{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+
+    grid-column: 1 / 5;
+    grid-row: 11;  
+}
+
+#education-history-head{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    grid-column: 1 / 5;
+    grid-row: 12;
+}
+
+#education-history-content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    grid-column: 1 / 5;
+    grid-row: 13 ;
+}
+
+#education-history-content h3{
+    grid-column: 1 / 5;
+}
+
+#human-services{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+
+    grid-column: 1 / 5;
+    grid-row: 14;
+}
+
+#self-identification-head{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    grid-column: 1 / 5;
+    grid-row: 15
+}
+
+#Self-identification-content{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+
+    grid-column: 1 / 5;
+    grid-row: 16
+}
+
+#further-info{
+    grid-column: 4 / 5;
+    grid-row: 17 / 19;
+}
+
+#additional-information{
+    grid-column: 1 / 4;
+    grid-row: 17;
+}
+
+#certification{
+    grid-column: 1 / 4;
+    grid-row: 18;
+}
+
+#permission{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    grid-column: 1 / 5;
+    grid-row: 19;
+}
+
+

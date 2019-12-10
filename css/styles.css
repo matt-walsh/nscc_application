@@ -1,0 +1,90 @@
+body{
+    font-family: 'Open-Sans', sans-serif;
+    color: rgb(42, 107, 163);
+}
+
+header{
+    display: grid;
+    background-color: rgb(42, 107, 163);
+    color: whitesmoke;
+
+    text-align: center;
+}
+
+input, select{
+    height: 2em;
+    max-height: 2em;
+    border: 1px solid rgb(42, 107, 163);
+    border-radius: 5px;
+}
+
+input[type="checkbox"]{
+    height: 1em;
+}
+
+/*Class Styles - Inputs/Headings*/
+.section-title{
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.4em;
+}
+
+.input-field > label{
+    display: block;
+}
+
+.input-field > input, .input-field > select{
+    width: 90%;
+}
+
+.form-line{
+    background-color: whitesmoke;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+#sex, #sex + label{
+    padding: 0.2em;
+    text-align: center;
+}
+
+#country-select{
+    width: 75%;
+}
+
+#first-lang-input{
+    display: inline;
+}
+
+#citizenship > ul{
+    list-style: none;
+}
+
+#citizenship > ul > li > div{
+    padding-top: 5%;
+}
+
+#payment-type .input-field input{
+    text-align: center;
+    width: 0%;
+}
+
+#human-services > div > label >input[type = "radio"]{
+    height: 1em;
+}
+
+#further-info{
+    background-color: darkgray;
+    margin: 1px;
+}
+
+#additional-information > textarea{
+    width: 90%;
+    resize: none;
+}
+
+#certification > div{
+    padding: 4px;
+    float: left;
+}
+

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="english">
+    <head>
+        <meta charset="utf-8">
+        <title>NSCC Application Form</title>
+
+        <link rel="stylesheet" href="./css/layout.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <header>
+            <h1>Nova Scotia Community College Program Application</h1>
+        </header>
+        <form method="POST" action="http://localhost:8040/submit-form" id="application-form">
+            <section id="input-section">
+                <section class="form-line" id="name-formal">
+                    <h2 class ="section-title">Personal Information</h2>
+                    
+                    <div class="input-field">
+                        <input name="first-name" type="text" required>
+                        <label for="first-name">First Name</label>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input name="middle-name" type="text">
+                        <label for="middle-name">Middle Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="last-name" type="text" required>
+                        <label for="last-name">Last Name</label>
+                    </div>
+                </section>
+
+                <section class="form-line" id="name-informal">
+                    <div class="input-field">
+                        <input name="prefered-first-name" type="text">
+                        <label for="prefered-first-name">Prefered First Name</label>
+                    </div>
+        
+                    <div class="input-field">
+                        <input name="previous-last-name" type="text">
+                        <label for="previous-last-name">Previous Last Name</label>
+                    </div>
+
+                    <div class="input-field">
+                        <input name="date-of-birth" type="date" value="" required>
+                        <label for="date-of-birth">D.O.B</label>
+                    </div>
+                    <div class="input-field">
+                        <div id="sex">
+                            <label for="male">M</label>
+                            <input name="sex" id="male" type="radio" value="male" required>
+                            <label for="female">F</label>
+                            <input name="sex" id="female" type="radio" value="female" required>
+                        </div>
+                        <label for="sex">Sex</label>
+                    </div>
+                    
+                </section>
+
+                <section class="form-line" id="street-address">
+                    <div class="input-field">
+                        <input name="apt-number" type="text" >
+                        <label for="apt-number">Apt #</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="builiding-number"type="text" required>
+                        <label for="building-number">Building Number</label>
+                    </div>
+                    <div class="input-field">             
+                        <input name="street-name" type="text" required>
+                        <label for="street-name">Street</label>
+                    </div>
+                </section>
+        
+                <section class="form-line" id="city-address">
+                    <div class="input-field">                     
+                        <input name="city" type="text" required>
+                        <label for="city">City/Town</label>
+                    </div>
+                    <div class="input-field">                      
+                        <input name ="province" type="text" required>
+                        <label for="province">Province</label>
+                    </div>
+                    <div class="input-field">                      
+                        <select name="country" id="country-select" required>
+                            <option value="canada">Canada</option>
+                        </select>
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="input-field">                     
+                        <input name="postal-code" type="text" required>
+                        <label for="postal-code">Postal Code</label>
+                    </div>
+                </section>
+        
+                <section class="form-line" id="phone-numbers">
+                    <div class="input-field">                    
+                        <input type="tel" name="home-phone" id="home-phone">
+                        <label for="home-phone">Home Telephone</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="tel" name="work-phone" id="work-phone">
+                        <label for="work-phone">Work Telephone</label>
+                    </div>
+                    <div class="input-field">                            
+                        <input type="tel" name="cell-phone" id="cell-phone">
+                        <label for="cell-phone">Cell Phone</label>
+                    </div>
+                </section>
+        
+                <section class="form-line" id="misc-info">
+                    <div class="input-field">   
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input type="text" name="student-number" id="student-number">
+                        <label for="student-number">Student Id Number</label>
+                    </div>
+                </section> 
+                
+                <section class="form-line" id="language-prof">
+                    <h2>English Language Proficiency</h2>
+                    <label for="is-first-lang">Is English your first language?</label>
+                    <div id="is-first-lang">
+                        <input type="radio" name="is-first-lang" id="is-first-lang-yes" value="true" required>
+                        <label for="is-first-lang-yes">Yes</label>
+                        <input type="radio" name="is-first-lang" id="is-first-lang-no" value="false" required>
+                        <label for="is-first-lang-no">No, My first language is:</label>
+                        <input type="text" id="first-lang-input">
+                    </div>
+                    <div id="program-choices-desc">
+                        <h2>Program Choices</h2>
+                        <p>You can apply for one or two program/campus combinations. Changes or additions to your choices require the submission of a new 
+                            application and fee. Your application will be considered for the next intake</p>
+                    </div>
+                </section>
+
+                <section class="form-line" id="citizenship">
+                    <h2>Citizenship Status</h2>
+                        <ul>
+                            <li>
+                                <input type="radio" class="citizenship-radio" name="citzenship-options" id="canadian-citizen" value="canadian-citizen" required>
+                                <label for="is-first-lang-yes">Canadain Citizen</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="citizenship-radio" name="citzenship-options" id="permanent-resident" value="permanent-resident" required>
+                                <label for="is-first-lang-no">Permanent Resident (Copy of Permanent Resident card required)</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="citizenship-radio" name="citzenship-options" id="protected-refugee" value="protected-refugee" required>
+                                <label for="is-first-lang-no">Refugee with protected person status</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="citizenship-radio" name="citzenship-options" id="other-citizen" value="other-citizen" required>
+                                <label for="is-first-lang-no">Other (Please specify below)</label>
+                            </li>
+                            <li>
+                                <div class="input-field">
+                                    <input type="text" id="citzenship-country">
+                                    <label for="citzenship-country">Country of Citizenship (if not Canadian)</label>
+                                </div>
+                            </li>
+                        </ul>
+                </section>
+
+                <section class="form-line" id="program-choices-programs">
+                    <div class="input-field">
+                        <select name="prefered-program" id="prefered-program" required>
+                            <option value="1">Web Programming</option>
+                        </select>
+                        <label for="prefered-program">Prefered Program</label>
+                    </div>
+                    <div class="input-field">
+                        <select name="second-program" id="second-program">
+                            <option value="1">Web Programming</option>
+                        </select>
+                        <label for="second-program">Second Program Choice</label>
+                    </div>
+                </section>
+
+                <section class="form-line" id="program-choices-locations">
+                    <div class="input-field">
+                        <select name="prefered-program-location" id="prefered-program-location" required>
+                            <option value="1">NSCC IT Campus</option>
+                        </select>
+                        <label for="prefered-program-location">Location</label>
+                    </div>
+                    <div class="input-field">
+                        <select name="second-program-location" id="second-program-location">
+                            <option value="1">Web Programming</option>
+                        </select>
+                        <label for="second-program-location">Location</label>
+                    </div>
+                </section>
+
+                <section class="form-line" id="application-fee-info">
+                    <h2>Application Fee</h2>
+                    <p>The non-refundable $25 application fee ($75 international, $0 ALP) must be received in order 
+                        for your application to be processed. Please do not send cash. </p>
+                </section>
+                
+                <section class="form-line" id="payment-type">
+                    <div class="input-field">
+                        <input type="radio" name="payment" id="visa" value="visa" required>  
+                        <label for="visa">Visa</label>  
+                    </div>
+                    <div class="input-field">
+                        <input type="radio" name="payment" id="mastercard" value="mastercard" required>
+                        <label for="mastercard">Mastercard</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="radio" name="payment" id="discover" value="discover" required>
+                        <label for="discover">Discover</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="radio" name="payment" id="amex" value="amex" required>
+                        <label for="amex">American Express</label>
+                    </div>
+                </section>
+                <section class="form-line" id="payment-details">
+                    <div class="input-field">
+                        <input type="text" id="credit-card-number" required>
+                        <label for="credit-card-number">Credit card number</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="expiry-date" required>
+                        <label for="credit-card-number">Expiration Date</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="cardholder-name" required>
+                        <label for="cardholder-name">Name of Cardholder (as it appears on the card)</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="cvc" required>
+                        <label for="cvc">CVC</label>
+                    </div>
+                </section>
+
+                <section class="form-line" id="education-history-head">
+                    <h2>Educational History</h2>
+                    <p>Please include all educational history, even if the program was not completed. Applications without complete documentation 
+                        cannot be processed regardless of the date of submission of the application. Official transcripts are required.</p>
+                </section>
+
+                <section class="form-line" id="education-history-content">
+                    <h3>High School or GED:</h3>
+                    <div class="input-field">
+                        <input name="high-school-name" type="text" required>
+                        <label for="high-school-name">Name of School</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="grade-complete" type="text" required>
+                        <label for="grade-complete">Grade Completed</label>
+                    </div>    
+                    <div class="input-field">
+                        <input name="high-school-date" type="text" required>
+                        <label for="high-school-date">Date</label>
+                    </div>
+                    <h3>Previous community college, university and/or other education:</h3>
+                    <div class="input-field">
+                        <input name="post-sec-name" type="text">
+                        <label for="post-sec-name">Institution Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="grade-complete" type="text">
+                        <label for="grade-complete">Degree/Diploma</label>
+                    </div>    
+                    <div class="input-field">
+                        <input name="high-school-date" type="text">
+                        <label for="high-school-date">Year Completed</label>
+                    </div>
+                    <br>
+                    <div class="input-field">
+                        <input name="high-school-name" type="text">
+                        <label for="high-school-name">Institution Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input name="grade-complete" type="text">
+                        <label for="grade-complete">Degree/Diploma</label>
+                    </div>    
+                    <div class="input-field">
+                        <input name="high-school-date" type="text">
+                        <label for="high-school-date">Year Completed</label>
+                    </div>                        
+                </section>
+
+                <section class="form-line" id="human-services">
+                    <div id="title">
+                        <h2>Health & Human Services Applicants</h2>
+                    </div>
+                    <div class="input-field">
+                        <span>Have you been convicted of a criminal offence for which you have not received a pardon?</span>
+                        
+                        <label for="criminal-offence-true" >
+                            <input name="criminal-offence" id="criminal-offence-true"type="radio" value="true" required>
+                            Yes
+                        </label>
+                        <label for="criminal-offence-false">
+                            <input name="criminal-offence" id="criminal-offence-false"type="radio" value="false" required>
+                            No
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <span>Have you been convicted of an offence or investigated for an activity resulting in your name being placed on the Child Abuse Registry? </span>
+                        
+                        <label for="child-abuse-reg-true">
+                            <input name="child-abuse-reg" id="child-abuse-reg-true" type="radio" value="true" required>
+                            Yes
+                        </label>
+                        <label for="child-abuse-reg-false">
+                            <input name="child-abuse-reg" id="child-abuse-reg-false" type="radio" value="false" required>
+                            No
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <span>Have you ever received any disciplinary actions (including any revocation of your licence to practise) as a member of another health and human service organization?</span>
+                        
+                        <label for="disciplinary-action-true">
+                            <input name="disciplinary-action" id="disciplinary-action-true" type="radio" value="true" required>
+                            Yes
+                        </label>
+                        <label for="disciplinary-action-false">
+                            <input name="disciplinary-action" id="disciplinary-action-false" type="radio" value="false" required>
+                            No
+                        </label>
+                    </div>
+                </section>
+
+                <section class="form-line" id="self-identification-head">
+                    <h2>Self-identification Questionnaire (Optional)</h2>
+                    <div>NSCC is committed to fostering a diverse college culture and community. Completion of all or part of this section is voluntary. The information collected may be used by staff and faculty to advise you of services. It will also be used to assist in assessing and improving student services.</div>
+                </section>
+
+                <section class="form-line" id="Self-identification-content">
+                    <div class="input-field">
+                        <span>Do you self-identify as an Aborginal person?</span>
+                        
+                        <label for="aborginal-true">
+                            <input name="aborginal" id="aborginal-true" type="radio" value="true">
+                            Yes
+                        </label>
+                        <label for="aborginal-false">
+                            <input name="aborginal" id="aborginal-false" type="radio" value="false">
+                            No
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <span>Do you self-identify as a member of the African Canadian community?</span>
+                        
+                        <label for="african-cdn-true">
+                            <input name="african-cdn" id="african-cdn-true" type="radio" value="true">
+                            Yes
+                        </label>
+                        <label for="african-cdn-false">
+                            <input name="african-cdn" id="african-cdn-false" type="radio" value="false">
+                            No
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <span>Do you self-identify as a person with a disability?</span>
+                        
+                        <label for="disability-true">
+                            <input name="disability" id="disability-true" type="radio" value="true">
+                            Yes
+                        </label>
+                        <label for="disability-false">
+                            <input name="disability" id="disability-false" type="radio" value="false">
+                            No
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <span>If you require accommodation, please provide documentation of disability:</span>
+                        
+                        <label for="accommodation-enclosed">
+                            <input name="accommodation" id="accommodation-enclosed" type="radio" value="enclosed">
+                            Enclosed
+                        </label>
+                        <label for="accommodation-forward">
+                            <input name="accommodation" id="accommodation-forward" type="radio" value="forward">
+                            I will forward it
+                        </label>
+                        <label for="accommodation-file">
+                            <input name="accommodation" id="accommodation-file" type="radio" value="on-file">
+                            On file with NSCC Admissions
+                        </label>
+                    </div>                       
+                </section>
+
+                <section id="further-info">
+                    <p>
+                        Forward your completed application form, fee, official transcripts, and any other admission documents to the following address. All submitted documents become the property of NSCC and will not be returned. Your application must be complete before it can be processed and a decision made. 
+                    </p>
+                    <div>NSCC Admissions </div>
+                    <div>P.O. Box 220</div>
+                    <div>Halifax, NS  B3J 2M4</div>
+
+                    <p>
+                        Questions? Email admissions@nscc.caor contact us by telephone or fax: 
+                    </p>
+                    <div>Tel: 902-491-4911  </div>
+                    <div>Toll free: 1-866-679-6722</div>
+                    <div>Fax: 902-491-3514  </div>
+                    <div>Toll free fax: 1-866-329-6722</div>
+                    <br>
+                    <div>nscc.ca</div>
+                </section>
+
+                <section class="form-line" id="additional-information">
+                    <h2>Additional Information</h2>
+                    <textarea name="additional-information" id="add-info-text" cols="50" rows="10"></textarea>
+                </section>
+
+                <section class="form-line" id="certification">
+                    <h2>Certification</h2>
+                    <p>
+                        I understand that it is my responsibility to arrange for the submission of the transcripts and that the application without complete documentation cannot be considered regardless of submission date. I certify that the foregoing information is accurate and correct to the best of my knowledge. I understand that the College will collect, use, and disclose my personal information in a confidential manner that is consistent with the operation of a post-secondary institution. My consent is conditional upon Nova Scotia Community College complying with their legal duties and obligations to manage the collection, use, and disclosure of personal information
+                    </p>
+                    <div class="input-field">
+                        <label for="applicant-certification">
+                            <input name="applicant-certification" type="checkbox" value="cerified" required>
+                            Applicant E-Signature
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <label for="certification-date">
+                            <input name="applicant-certification" type="date" value="cerified" required>
+                            Date
+                        </label>
+                    </div>
+                </section>
+
+                <section class="form-line" id="permission">
+                    <section id="permission-left">
+                        <h2>Permission to Release Personal Information(optional)</h2>
+                        <div class="input-field">
+                            <label for="info-release-accept">
+                                <input name="info-release-accept" type="checkbox" value="cerified">
+                                I hereby give consent to the release of the information concerning my application for admission during the evaluation period to:
+                            </label>
+                        </div>
+                    </section>
+                    <section id="permission-right">
+                        <p>
+                            Your written permission is required before any personal and financial information, including admission decisions, can be released to a third party. Access to your personal information will only be granted until your first day of classes.
+                        </p>
+                        <div id="input-field">
+                            <label for="info-release-name">
+                                <input name="info-release-name" type="text">
+                                Name
+                            </label>
+                        </div>
+                        <div id="input-field">
+                            <label for="info-release-relation">
+                                <input name="info-release-relation" type="text">
+                                Relationship (e.g. Parent, guardian, guidance counsellor, spouse)
+                            </label>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <input type=submit>
+        </form>
+
+        <script src="./radioValidation.js"></script>
+    </body>
+</html>
